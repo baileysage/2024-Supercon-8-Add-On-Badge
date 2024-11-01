@@ -5,7 +5,7 @@ counter = 0
 
 ## do a quick spiral to test
 if petal_bus:
-    for j in range(8):
+    for j in range(7):
         which_leds = (1 << (j+1)) - 1 
         for i in range(1,9):
             print(which_leds)
