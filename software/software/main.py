@@ -11,8 +11,9 @@ if petal_bus:
             print(which_leds)
             petal_bus.writeto_mem(PETAL_ADDRESS, i, bytes([which_leds]))
             time.sleep_ms(30)
-            petal_bus.writeto_mem(PETAL_ADDRESS, i, bytes([which_leds]))
-
+    for i in range(1,9):
+            petal_bus.writeto_mem(PETAL_ADDRESS, i, bytes([0x00]))
+    
 while True:
 
     ## display button status on RGB
